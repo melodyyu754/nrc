@@ -3,7 +3,7 @@ import { createCalculateNRC } from '../components/CalculateNRC';
 
 const BHNCalculator = () => {
     const bhnTitle = "BINARY HOMOGENEOUS NUCLEATION (BHN) OF H₂SO₄-H₂O";
-    const bhnOutput = "BHN Nucleation Rate (cm⁻³s⁻¹)";
+    const bhnOutput = "BHN Nucleation Rate (cm⁻³s⁻¹):";
 
     const bhnFields = { h2so4: '', temp: '', rh: '', sfcArea: '' }
     const bhnFieldLabels = {

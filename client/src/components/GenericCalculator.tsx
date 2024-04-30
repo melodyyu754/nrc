@@ -57,7 +57,7 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
     const [loading, setLoading] = useState<boolean>(false);
 
     // State to store calculation result
-    const [result, setResult] = useState<number | null>(null);
+    const [result, setResult] = useState<any | null>('________');
 
     // Handler for form submission (calculation)
     const handleCalculate = async (event: FormEvent<HTMLFormElement>) => {
@@ -103,9 +103,8 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
 
     return (
         <BackgroundContainer>
-            <div>
-                <h3>{title}</h3>
-
+            <div className=''>
+                <h3 className=''>{title}</h3>
                 {/* Form */}
                 <form onSubmit={handleCalculate}>
                     {/* Input Fields */}
@@ -125,7 +124,7 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
                 </form>
 
                 {/* Output Field */}
-                {result !== null && <OutputField label={outputLabel} value={result} />}
+                {<OutputField label={outputLabel} value={result} />}
 
                 <div>
                     {/* Link to Home */}

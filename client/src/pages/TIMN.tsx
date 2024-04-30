@@ -4,7 +4,7 @@ import { createCalculateNRC } from '../components/CalculateNRC';
 
 const TIMNCalculator= () => {
     const timnTitle = "TERNARY ION MEDIATED NUCLEATION (TIMN) OF H₂SO₄-H₂O-NH₃";
-    const timnOutput = "TIMN Nucleation Rate (cm⁻³s⁻¹)";
+    const timnOutput = "TIMN Nucleation Rate (cm⁻³s⁻¹):";
 
     const timnFields = { h2so4: '', temp: '', rh: '', ionRate: '', sfcArea: '', nh3: '' }
     const timnFieldLables = {
