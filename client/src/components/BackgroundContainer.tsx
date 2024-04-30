@@ -13,7 +13,6 @@ const BackgroundContainer = ({ children }: BackgroundContainerProps) => {
         height: "100vh",
         width: "100vw",
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: "rgba(0, 0, 0, 0.2)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         display: "flex",

@@ -4,7 +4,7 @@ import { createCalculateNRC } from '../components/CalculateNRC';
 
 const BIMNCalculator= () => {
     const bimnTitle = "BINARY ION MEDIATED NUCLEATION (BIMN) OF H₂SO₄-H₂O";
-    const bimnOutput = "BIMN Nucleation Rate (cm⁻³s⁻¹):";
+    const bimnOutput = "BIMN Nucleation Rate (cm⁻³s⁻¹)";
 
     const bimnFields = { h2so4: '', temp: '', rh: '', ionRate: '', sfcArea: '' }
     const bimnFieldLabels = {

@@ -4,7 +4,7 @@ import { createCalculateNRC } from '../components/CalculateNRC';
 
 const THNCalculator= () => {
     const thnTitle = "TERNARY HOMOGENEOUS NUCLEATION (THN) OF H₂SO₄-H₂O-NH₃";
-    const thnOutput = "THN Nucleation Rate (cm⁻³s⁻¹):";
+    const thnOutput = "THN Nucleation Rate (cm⁻³s⁻¹)";
 
     const thnFields = { h2so4: '', temp: '', rh: '', sfcArea: '', nh3: '' }
     const thnFieldLabels = {

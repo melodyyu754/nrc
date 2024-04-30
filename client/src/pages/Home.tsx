@@ -11,7 +11,7 @@ function Home() {
             <p>TERNARY HOMOGENEOUS NUCLEATION (THN) OF H₂SO₄-H₂O-NH₃</p>
             <p>BINARY ION-MEDIATED NUCLEATION (BIMN) OF H₂SO₄-H₂O</p>
             <p>TERNARY ION-MEDIATED NUCLEATION (TIMN) OF H₂SO₄-H₂O-NH₃</p>
-            <div className='flex px-1'>
+            <div style={{ display: "flex" }}>
                 <Button to={'/BHN'}>BHN</Button>
                 <Button to={'/THN'}>THN</Button>
                 <Button to={'/BIMN'}>BIMN</Button>
