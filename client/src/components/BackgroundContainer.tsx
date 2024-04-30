@@ -19,28 +19,10 @@ const BackgroundContainer = ({ children }: BackgroundContainerProps) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        color: 'white',
-        position: 'relative',
-        zIndex: 0 // Important for stacking the pseudo-element behind the children
+        color: 'white'
       }}
     >
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // Black with 50% opacity
-        filter: 'brightness(50%)',
-        zIndex: 1 // Important for stacking the pseudo-element behind the children
-      }}>
-      </div>
-      <div style={{
-        position: 'relative',
-        zIndex: 2 // Important for stacking the children above the overlay
-      }}>
-        {children}
-      </div>
+      {children}
     </div>
   );
 };
