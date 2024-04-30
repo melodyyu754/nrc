@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import backgroundImage from '../assets/nitish-meena-RbbdzZBKRDY-unsplash.jpg';
+import backgroundImage from '../assets/bg.jpg';
 
 interface BackgroundContainerProps {
   children: ReactNode;
