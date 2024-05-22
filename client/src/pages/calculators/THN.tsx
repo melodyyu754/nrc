@@ -1,8 +1,8 @@
-import GenericCalculator from '../components/GenericCalculator';
-import { createCalculateNRC } from '../components/CalculateNRC';
+import GenericCalculator from '../../components/GenericCalculator';
+import { createCalculateNRC } from '../../components/CalculateNRC';
 
 
-const THNCalculator= () => {
+const THNCalculator = () => {
     const thnTitle = "TERNARY HOMOGENEOUS NUCLEATION (THN) OF H₂SO₄-H₂O-NH₃";
     const thnOutput = "THN Nucleation Rate (cm⁻³s⁻¹)";
 
@@ -19,10 +19,12 @@ const THNCalculator= () => {
         temp: { min: 190, max: 304 },
         rh: { min: 0.5, max: 99.5 },
         sfcArea: { min: 1, max: 1000 },
-        nh3: { min: 1E5, max: 1E12}
+        nh3: { min: 1E5, max: 1E12 }
     }
 
-    const thnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/thn'
+    // const thnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/thn'
+    const thnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/thn'
+
     const calculateTHN = createCalculateNRC({ endpoint: thnEndpoint });
 
     return (

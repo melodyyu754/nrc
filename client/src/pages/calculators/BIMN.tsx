@@ -1,8 +1,8 @@
-import GenericCalculator from '../components/GenericCalculator';
-import { createCalculateNRC } from '../components/CalculateNRC';
+import GenericCalculator from '../../components/GenericCalculator';
+import { createCalculateNRC } from '../../components/CalculateNRC';
 
 
-const BIMNCalculator= () => {
+const BIMNCalculator = () => {
     const bimnTitle = "BINARY ION MEDIATED NUCLEATION (BIMN) OF H₂SO₄-H₂O";
     const bimnOutput = "BIMN Nucleation Rate (cm⁻³s⁻¹)";
 
@@ -18,11 +18,13 @@ const BIMNCalculator= () => {
         h2so4: { min: 5e5, max: 5e9 },
         temp: { min: 190, max: 304 },
         rh: { min: 0.5, max: 99.5 },
-        ionRate: { min: 2, max: 100},
+        ionRate: { min: 2, max: 100 },
         sfcArea: { min: 1, max: 1000 }
     }
 
-    const bimnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/bimn'
+    // const bimnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/bimn'
+    const bimnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/bimn'
+
     const calculateBIMN = createCalculateNRC({ endpoint: bimnEndpoint });
 
     return (

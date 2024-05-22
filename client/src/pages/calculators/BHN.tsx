@@ -1,5 +1,5 @@
-import GenericCalculator from '../components/GenericCalculator';
-import { createCalculateNRC } from '../components/CalculateNRC';
+import GenericCalculator from '../../components/GenericCalculator';
+import { createCalculateNRC } from '../../components/CalculateNRC';
 
 const BHNCalculator = () => {
     const bhnTitle = "BINARY HOMOGENEOUS NUCLEATION (BHN) OF H₂SO₄-H₂O";
@@ -19,7 +19,8 @@ const BHNCalculator = () => {
         sfcArea: { min: 1, max: 1000 },
     }
 
-    const bhnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/bhn'
+    // const bhnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/bhn'
+    const bhnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/bhn'
     const calculateBHN = createCalculateNRC({ endpoint: bhnEndpoint });
 
     return (
