@@ -21,13 +21,14 @@ export const createCalculateNRC = ({ calculatorApiEndpoint, loggingApiEndpoint, 
         const output = result.nucRate;
 
         console.log('Calculation result:', output);
+        console.log('Values:', values);
 
         // 2. Send Log Data to API Gateway
         const logData = {
-          calculatorName,
+          calculatorName: calculatorName,
           timestamp: new Date().toISOString(),
           inputData: values,
-          output,
+          output: output,
         };
 
         await fetch(loggingApiEndpoint, {

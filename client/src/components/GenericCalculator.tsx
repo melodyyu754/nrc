@@ -66,6 +66,9 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
         // Set loading to true when starting the calculation
         setLoading(true);
 
+        // log the input values
+        console.log('Input values:', inputValues);
+
         // Validate input values
         const validationErrors: string[] = [];
         Object.entries(inputValues).forEach(([field, value]) => {
@@ -131,7 +134,7 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
                 <div>
                     {/* Link to Home */}
                     <Link to="/">
-                        <button style={{ marginRight: '10px' }}>Home</button>
+                        <button style={{ marginRight: '10px' }}>Homer</button>
                     </Link>
                 </div>
             </div>
