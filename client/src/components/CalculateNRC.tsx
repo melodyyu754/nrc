@@ -20,6 +20,8 @@ export const createCalculateNRC = ({ calculatorApiEndpoint, loggingApiEndpoint, 
         const result = await response.json();
         const output = result.nucRate;
 
+        console.log('Calculation result:', output);
+
         // 2. Send Log Data to API Gateway
         const logData = {
           calculatorName,
@@ -33,6 +35,7 @@ export const createCalculateNRC = ({ calculatorApiEndpoint, loggingApiEndpoint, 
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(logData),
         });
+        console.log('Log data sent:', logData);
 
         return output; // Return the calculated value
       } else {
