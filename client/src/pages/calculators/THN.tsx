@@ -24,8 +24,10 @@ const THNCalculator = () => {
 
     // const thnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/thn'
     const thnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/thn'
+    const AWSEndpoint = 'https://aasvtb8dgk.execute-api.us-east-2.amazonaws.com/prod/nrc-calculator'
+    const calcName = 'THN'
 
-    const calculateTHN = createCalculateNRC({ endpoint: thnEndpoint });
+    const calculateTHN = createCalculateNRC({ calculatorApiEndpoint: thnEndpoint, loggingApiEndpoint: AWSEndpoint, calculatorName: calcName});
 
     return (
         <GenericCalculator

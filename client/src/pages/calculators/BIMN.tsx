@@ -24,8 +24,10 @@ const BIMNCalculator = () => {
 
     // const bimnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/bimn'
     const bimnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/bimn'
+    const AWSEndpoint = 'https://aasvtb8dgk.execute-api.us-east-2.amazonaws.com/prod/nrc-calculator'
+    const calcName = 'BIMN'
 
-    const calculateBIMN = createCalculateNRC({ endpoint: bimnEndpoint });
+    const calculateBIMN = createCalculateNRC({ calculatorApiEndpoint: bimnEndpoint, loggingApiEndpoint: AWSEndpoint, calculatorName: calcName});
 
     return (
         <GenericCalculator

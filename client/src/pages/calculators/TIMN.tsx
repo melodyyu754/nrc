@@ -26,8 +26,10 @@ const TIMNCalculator = () => {
 
     // const timnEndpoint = 'http://apm.asrc.albany.edu:3000/nrcapi/timn'
     const timnEndpoint = 'https://api.asrc.albany.edu:3005/nrcapi/timn'
+    const AWSEndpoint = 'https://aasvtb8dgk.execute-api.us-east-2.amazonaws.com/prod/nrc-calculator'
+    const calcName = 'TIMN'
 
-    const calculateTIMN = createCalculateNRC({ endpoint: timnEndpoint });
+    const calculateTIMN = createCalculateNRC({ calculatorApiEndpoint: timnEndpoint, loggingApiEndpoint: AWSEndpoint, calculatorName: calcName});
 
     return (
         <GenericCalculator

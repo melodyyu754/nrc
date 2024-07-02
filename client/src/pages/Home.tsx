@@ -18,6 +18,7 @@ function Home() {
                 <Button to={'/TIMN'}>TIMN</Button>
             </div>
         </BackgroundImage>
+
     );
 }
 
