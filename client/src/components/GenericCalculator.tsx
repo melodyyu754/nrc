@@ -86,6 +86,7 @@ const GenericCalculator: FC<GenericCalculatorProps<InputValues>> = ({
         // Perform the calculation if validation passes
         try {
             const response = await calculationFunction(inputValues);
+            console.log('Response:', response);
 
             if (response !== null) {
                 setResult(response);
